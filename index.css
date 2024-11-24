@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Courier New', Courier, monospace;       
+}
+
+#all-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.small-field {
+    width: 20rem;
+    height: 20rem; 
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
+}
+
+.field-cell {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px white;
+    position: relative;
+    cursor: pointer;
+}
+
+.square-content {
+    width: fit-content;
+    /* background-color: green; */
+    font-size: 1rem;    
+    text-align: center;
+}
+
+.field-cell-covered::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+img {
+    width: 2rem;
+}
+
